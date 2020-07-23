@@ -3,9 +3,258 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Javascript Assignment #9</title>
+    <link rel="stylesheet" href="./style.css">       
 </head>
 <body>
+
+    Input Year: <input type="text" id="year" placeholder="Check Leap Year"  /> 
+      
+    <input type="button" id="button" onClick="isLeapYear()" value="Check Leap Year" /> 
+      
+    <p id="displayAnswer"></p> 
+
+    <a href="#" onclick="greetUser()"> click on a message </a>
+
+
+    <div style="text-align:center">
+      <h2>Tabbed Image Gallery</h2>
+      <p>Click on the images below:</p>
+    </div>
+
+    <div class="row">
+      <div class="column">
+        <img src="./images/3.jpg" alt="Nature" class="modalImg" onclick="myFunction(this);">
+      </div>
+      <div class="column">
+        <img src="./images/9.jpg" alt="Snow" class="modalImg" onclick="myFunction(this);">
+      </div>
+      <div class="column">
+        <img src="./images/11.jpg" alt="Mountains" class="modalImg" onclick="myFunction(this);">
+      </div>
+      <div class="column">
+        <img src="./images/12.jpg" alt="Lights" class="modalImg" onclick="myFunction(this);">
+      </div>
+    </div>
     
+    <div class="container">
+      <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+      <img id="expandedImg" style="width:500px">
+      <div id="imgtext"></div>
+    </div>
+    
+  <!----------------------------------------------------------------------------------------->
+
+      <h3> Mobile Phone lookup </h3>
+        <div class="moblieDiv">
+           <img src="./images/xiaomi-poco-f2-pro.webp"
+                onclick="showTheMessage()"
+                alt="xiaomi-poco-f2-pro"> 
+            <p class="text"> Xiaomi Poco F2 Pro  </p>
+        </div>
+         
+        <div class="moblieDiv">
+           <img src="./images/samsung-galaxy-a21s_2_.webp"
+                onclick="showTheMessage()"
+                alt="samsung-galaxy-a21s_2">
+           <p class="text"> Samsung Galaxy A21s  </p>
+        </div>   
+           
+        <div class="moblieDiv">
+           <img src="./images/oneplus-8-450x450.webp"
+                onclick="showTheMessage()"
+                alt="oneplus-8">
+           <p class="text"> OnePlus 8  </p>
+        </div>
+
+        <div class="moblieDiv">
+            <img src="./images/Huawei Nova 7i.webp"
+                 onclick="showTheMessage()"                           
+                 alt="Huawei Nova 7i">
+            <p class="text"> Huawei Nova 7i </p>
+        </div>         
+
+        <div>
+           <img src="./images/pic_bulboff.gif" 
+                id="bulb"
+                onmouseover="setNewImage()" 
+                onmouseout="setOldImage()"
+                alt="bulboff"> 
+        </div>
+   
+      
+    
+        <table id="myTable">
+         <tr>
+           <th> index  </th>
+           <th> name </th>
+           <th> class </th>    
+         </tr>
+         <tr>
+           <td>0</td>
+           <td> Jhone </td>
+           <td> 10 </td>
+           <td>
+            <input type="button" value="Delete" onclick="deleteRowFunction()" />
+           </td>
+         </tr>
+         <tr>
+           <td>1</td>
+           <td> Doe </td>
+           <td> 9 </td>
+           <td>
+            <input type="button" value="Delete" onclick="deleteRowFunction()" />
+          </td>
+         </tr>
+         <tr>
+           <td>2</td>
+           <td> James </td>
+           <td> 8 </td>
+           <td>
+            <input type="button" value="Delete" onclick="deleteRowFunction()" />
+           </td>
+         </tr>
+         <tr>
+           <td>3</td>
+           <td> Jhone Doe </td>
+           <td> 11 </td>
+           <td>
+            <input type="button" value="Delete" onclick="deleteRowFunction()" />
+          </td>
+         </tr>
+         <tr>
+           <td>4</td>
+           <td> James Doe </td>
+           <td> 7 </td>
+           <td>
+            <input type="button" value="Delete" onclick="deleteRowFunction()" />
+          </td>
+         </tr>
+         <tr>
+           <td>5</td>
+           <td> Dan </td>
+           <td> 6 </td>
+           <td>
+            <input type="button" value="Delete" onclick="deleteRowFunction()" />
+           </td>
+         </tr>
+         <tr>
+           <td>6</td>
+           <td> Jane </td>
+           <td> 9 </td>
+           <td>
+            <input type="button" value="Delete" onclick="deleteRowFunction()" />
+          </td>
+         </tr>
+         <tr>
+           <td>7</td>
+           <td> Muzammil </td>
+           <td> 12 </td>
+           <td>
+            <input type="button" value="Delete" onclick="deleteRowFunction()" />
+          </td>
+         </tr>
+         <tr>
+           <td>8</td>
+           <td> Hannan </td>
+           <td> 4 </td>
+           <td>
+            <input type="button" value="Delete" onclick="deleteRowFunction()" />
+           </td>
+         </tr>
+         <tr>
+           <td>9</td>
+           <td> Ismail </td>
+           <td> 7 </td>
+           <td>
+            <input type="button" value="Delete" onclick="deleteRowFunction()" />
+          </td>
+         </tr>
+         <tr>
+           <td>10</td>
+           <td> hamza </td>
+           <td> 8 </td>
+           <td>
+            <input type="button" value="Delete" onclick="deleteRowFunction()" />
+           </td>
+         </tr>
+       </table>
+      
+      <div class="inc">
+        <button type="button" onClick="onClick()"> increase </button>
+        <span id="clicks">0</span>
+        <button type="button" onClick="setClick()">decrease</button> 
+      </div> 
+
+
+     <div class="showData">
+      <form>
+         <label for="user_email"><b>E-mail: </b></label>
+         <input type="email" name="email" id="user_email">
+
+           <br />
+           <br />
+
+         <label for="user_id"><b>Password: </b></label>
+         <input type="password" name="message" id="user_id">
+       </form>
+     
+       <input type="submit" onclick="showInput();"><br/>
+       <label>Your input: </label>
+       <p><span id='displayEmail'></span></p>
+       <p><span id='displayPassword'></span></p>
+     </div>
+
+     <div>
+      <p id="expandThePara">
+         Slow lorises are a group of several species of strepsirrhine primates which make up the genus Nycticebus.
+         <a href="javascript:void(0);" onClick="expandLoris();"><em>Click for more.</em></a>
+      </p> 
+     </div>
+       
+     <div>
+       <form action="./index.html" method="get">
+        <label for="information">Enter your information:</label>
+        <input type="text" id="todo-item" name="information" placeholder="name age and your subject" ><br><br>             
+        
+        <input type="button" onclick="addTodo()" value="Add Item" />
+        <input type="button" onclick="deleteAll()" value="Delete All" />
+       </form>       
+     </div>
+
+     <div>
+       <table>
+         <tr id="list">
+           <th> information </th>         
+         </tr>     
+       </table>
+     </div>
+       
+
+     <div>
+      <h1> DOM </h1>
+      <div id="form-content" class="content">
+      <label for="first-name">First Name</label>
+      <input type="text" id="first-name" /> <br /> <br />
+      <label for="last-name">Last Name</label>
+      <input type="text" id="last-name" /> <br /> <br />
+      <label for="email">Email</label>
+      <input type="text" id="email" /> 
+      </div>
+      <!-- <div id="main-content" class="content">
+      <p class="render"> First Name : Alex</p>
+      <p class="render" id="lastName">Last Name: Bank</p>
+      <p class="render"> Email : alexbank@example.com</p>
+      <p class="render"> Country : Pakistan </p>
+      <p class="render"> contact : +92 300 1234567</p>
+      </div> -->
+
+      <div id="main-content" class="content"><p class="render"> First Name : Alex</p><p class="render" id="lastName">Last Name: Bank</p><p class="render"> Email : alexbank@example.com</p><p class="render"> Country : Pakistan </p><p class="render"> contact : +92 300 1234567</p></div>
+     </div>
+
+      
+
+
+   <script src="./app.js"></script> 
 </body>
 </html>
